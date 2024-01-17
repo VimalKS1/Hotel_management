@@ -7,7 +7,7 @@ from datetime import date
 from time import strftime
 from PIL import ImageTk, Image
 import sqlite3
-conn=sqlite3.connect("hotel.db")  #CONNECTING DATABASE FILE
+conn=sqlite3.connect("Enter your database file name")  #CONNECTING DATABASE FILE or else rise error
 cur=conn.cursor()
 def checkin():   #CHECKIN MODULE
     def alarm():
@@ -186,7 +186,7 @@ def checkout():            #CHECKOUT MODULE
              da=i[1]
              de=i[2]
            amt=amount()
-           ai=datetime.date.today()   ######################################
+           ai=datetime.date.today()  
            formate="insert into historyofcus(name,amount,dat,dateofcheckout)values('{a1}',{b1},'{c1}','{d1}')"
            sql=formate.format(a1=nam,b1=amt,c1=da,d1=ai)
            res=cur.execute(sql)
@@ -525,7 +525,7 @@ if __name__=='__main__':            #MAIN MODULE!!!!!!!! program starts from her
     window=Tk()
     window.title("HOTEL MANAGEMENT SYSTEM")
     window.maxsize(width="1600",height="1000")
-    I=Image.open('C:\\Users\\K.S.Vimal\\Pictures\\Saved Pictures\\wallpaperbetter.jpg')
+    I=Image.open('Enter your path of good desktop picture')    #####Error rise here to avoid it enter your picture
     bk=ImageTk.PhotoImage(I)
     def home():      #HOME PAGE MODULE
         f=Frame()
