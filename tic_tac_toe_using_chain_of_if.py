@@ -1,6 +1,5 @@
 from tkinter import *
 import random as r
-#accracy 85%.
 i1=0
 i2=0
 i3=0
